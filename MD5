@@ -1,0 +1,12 @@
+d8b3c9fec8b0e11150db3b740cbf7887 *DESCRIPTION
+7f8170a3ae931bd7fd058d02ab45f441 *LICENSE
+d81819ec90571500fb4cf5161bc8cf06 *NAMESPACE
+5f88b948a67723fc070dcb265fec1fe4 *R/ggplot2scales.R
+c548062eb50e79b8f5de60aa64779b89 *R/palettetown.R
+c4838d641eff35f5e44e71fa0cd65976 *R/pokedex.R
+a0fb5871209d4f35603b93c45f4c2886 *R/sysdata.rda
+4b1ec2e304fffb5ba13af8d2603ee6d3 *man/ichooseyou.Rd
+38a3dda7042e1e7a9fe0193735a2db07 *man/palettetown.Rd
+f1721d95bf19f43507fcc9200cb732fe *man/pokedex.Rd
+940d884431a58cad010918ef55f2e07a *man/pokepal.Rd
+43641c7f9d80105ed83aa2984c332684 *man/scale_colour_poke.Rd
