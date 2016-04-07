@@ -1,18 +1,21 @@
 Package: palettetown
 Type: Package
 Title: Use Pokemon Inspired Colour Palettes
-Version: 0.1.0
-Date: 2015-09-04
+Version: 0.1.1
+Date: 2016-04-06
 Author: Tim Lucas
 Maintainer: Tim Lucas <timcdlucas@gmail.com>
-Description: Use Pokemon(R) inspired palettes with additional 'ggplot2' scales. Palettes are the colours in each Pokemon's sprite, ordered by how common they are in the image. The first 386 Pokemon are currently provided.
+Description: Use Pokemon(R) inspired palettes with additional 'ggplot2' scales.
+    Palettes are the colours in each Pokemon's sprite, ordered by how common
+    they are in the image. The first 386 Pokemon are currently provided.
 Suggests: ggplot2, magrittr
 Imports: grDevices, stats, graphics
 License: MIT + file LICENSE
 Copyright: Pokemon, pokedex and all pokemon names are trademarks of
         Nintendo.
 URL: https://github.com/timcdlucas/palettetown
+RoxygenNote: 5.0.1
 NeedsCompilation: no
-Packaged: 2015-09-07 10:51:48 UTC; tim
+Packaged: 2016-04-06 19:53:39 UTC; tim
 Repository: CRAN
-Date/Publication: 2015-09-07 18:17:56
+Date/Publication: 2016-04-07 01:01:15

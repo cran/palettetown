@@ -24,6 +24,11 @@ NULL
 #'  The most common colour in each cluster is then returned. It is
 #'  hoped this will give a good balance between reflecting the pokemons
 #'  colouring while giving relatively distinct colours.
+#'
+#'  A few pokemon have odd names. Argument \code{pokemon} ignores letter case.
+#'  Female and Male Nidoran are named NidoranF and NidoranM respectively.
+#'  Mr. Mime should be either 'Mr. Mime' or 'mr. mime'. The full stop and space
+#'  are needed.
 #'@seealso \code{\link{ichooseyou}}
 #'@examples
 #'pal <- pokepal(3)
@@ -34,10 +39,7 @@ pokepal <- function(pokemon = 1, spread = NULL){
     
   # Fix lower case to first letter capitilised.
   if(is.character(pokemon)){
-    s <- strsplit(pokemon, " ")[[1]]
-    pokemon <- paste(toupper(substring(s, 1,1)), 
-                     tolower(substring(s, 2)),
-        sep="", collapse=" ")
+    pokemon <- tolower(pokemon)
   }
 
   # Reorder palette if spread is numeric.
@@ -47,10 +49,10 @@ pokepal <- function(pokemon = 1, spread = NULL){
     if(length(palette) > 5){
     palette2 <- c(palette[1:4],
       palette[5:length(palette)][
-        grDevices::rgb2hsv(grDevices::col2rgb(palette[5:length(palette)]))[2,] > 0.2
+        grDevices::rgb2hsv(grDevices::col2rgb(palette[5:length(palette)]))[2,] > 0.3
       ]
     )
-    if(length(palette2) > spread){
+    if(length(palette2) >= spread){
       palette <- palette2
     }
     }
@@ -69,7 +71,7 @@ pokepal <- function(pokemon = 1, spread = NULL){
       c(matrix(c(1:floor(spread/2), spread:floor((spread/2 + 1))), 
       2, byrow = T))[1:spread] 
     )
-    pal <- sapply(clusNums, function(x) pokeColours[[pokemon]][which(clusts == x)[1]])
+    pal <- sapply(clusNums, function(x) palette[which(clusts == x)[1]])
             
   } else {
     pal <- pokeColours[[pokemon]]
